@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Block\Product\ListProduct" type="Boxalino\Intelligence\Block\Product\BxListProducts" />
+    <preference for="Magento\CatalogSearch\Block\Result" type="Boxalino\Intelligence\Block\Result" />
+    <preference for="Magento\Catalog\Block\Product\ProductList\Toolbar" type="Boxalino\Intelligence\Block\BxToolbar"/>
+    <preference for="Magento\Catalog\Block\Product\ProductList\Related" type="Boxalino\Intelligence\Block\Product\ProductList\Related"/>
+    <preference for="Magento\Catalog\Block\Product\ProductList\Upsell" type="Boxalino\Intelligence\Block\Product\ProductList\Upsell"/>
+    <preference for="Magento\Catalog\Block\Product\ProductList\Crosssell" type="Boxalino\Intelligence\Block\Product\ProductList\Crosssell"/>
+    <preference for="Magento\Checkout\Block\Cart\Crosssell" type="Boxalino\Intelligence\Block\Cart\Crosssell" />
+
+    <preference for="Magento\Catalog\Model\Layer\Filter\Item\DataBuilder" type="Boxalino\Intelligence\Model\BxDataBuilder" />
+    <preference for="Magento\Catalog\Model\Layer\State" type="Boxalino\Intelligence\Block\State" />
+
+    <preference for="Magento\CatalogSearch\Controller\Result\Index" type="Boxalino\Intelligence\Controller\Result\Index" />
+</config>
