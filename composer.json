@@ -1,14 +1,19 @@
 {
   "name": "ikutara/test",
   "description": "Ikutara Test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "magento2-module",
   "license": [
     "OSL-3.0",
     "AFL-3.0"
   ],
   "require": {
-    "php": "~5.5.0|~5.6.0|~7.0.0"
+    "php": "~5.5.0|~5.6.0|~7.0.0",
+    "magento/module-catalog": "*",
+    "magento/module-layered-navigation": "*",
+    "magento/module-search": "*",
+    "magento/module-indexer": "*",
+    "magento/framework": "*"
   },
   "autoload": {
     "files": ["registration.php"],
