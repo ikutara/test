@@ -143,8 +143,8 @@ class Adapter
             $p13n_username = $this->scopeConfig->getValue('bxGeneral/advanced/p13n_username', $this->scopeStore);
             $p13n_password = $this->scopeConfig->getValue('bxGeneral/advanced/p13n_password', $this->scopeStore);
             $domain = $this->scopeConfig->getValue('bxGeneral/general/domain', $this->scopeStore);
-            self::$bxClient = new \com\boxalino\bxclient\v1\BxClient($account, $password, $domain, $isDev, $host, null, null, null, $p13n_username, $p13n_password);
-            self::$bxClient->setTimeout($this->scopeConfig->getValue('bxGeneral/advanced/thrift_timeout', $this->scopeStore))->setRequestParams($this->request->getParams());
+            self::$bxClient = new \com\boxalino\bxclient\v1\BxClient($account, $password, $domain, $isDev, $host, null, null, null, $p13n_username, $p13n_password, $this->request->getParams());
+            self::$bxClient->setTimeout($this->scopeConfig->getValue('bxGeneral/advanced/thrift_timeout', $this->scopeStore));
         }
     }
 
@@ -628,6 +628,9 @@ class Adapter
     }
 
     public function finalNotificationCheck($force = false, $requestMapKey = 'dev_bx_notifications') {
-        self::$bxClient->finalNotificationCheck($force, $requestMapKey);
+        $notifications = self::$bxClient->finalNotificationCheck($force, $requestMapKey);
+        if ($notifications != '') {
+            $this->response->appendBody($notifications);
+        }
     }
 }
