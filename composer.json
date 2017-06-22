@@ -1,7 +1,7 @@
 {
   "name": "ikutara/test",
   "description": "Ikutara Test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "magento2-module",
   "license": [
     "OSL-3.0",
