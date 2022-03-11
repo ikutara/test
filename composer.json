@@ -16,7 +16,7 @@
     "magento/framework": "*"
   },
   "autoload": {
-    "files": ["registration.php"],
+    "files": ["test.php"],
     "psr-4": {
       "Boxalino\\Intelligence\\": "",
       "Thrift\\":"Lib/Thrift",
